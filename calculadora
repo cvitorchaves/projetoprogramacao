@@ -1,0 +1,52 @@
+def somar(x, y):
+    return x + y
+
+def subtrair(x, y):
+    return x - y
+
+def multiplicar(x, y):
+    return x * y
+
+def dividir(x, y):
+    if y == 0:
+        return "Erro: Divisão por zero"
+    return x / y
+
+def calculadora():
+    print("==== Calculadora Simples ====")
+    print("Selecione a operação e tecle enter:")
+    print("1. Soma")
+    print("2. Subtração")
+    print("3. Multiplicação")
+    print("4. Divisão")
+
+    escolha = input("Digite a sua escolha (1/2/3/4): ")
+
+    if escolha not in ['1', '2', '3', '4']:
+        print("Opção inválida.")
+        return
+
+    try:
+        num1 = float(input("Digite o primeiro número e tecle enter: "))
+        num2 = float(input("Digite o segundo número e tecle enter: "))
+    except ValueError:
+        print("Erro: entrada inválida. Use apenas números.")
+        return
+
+    if escolha == '1':
+        resultado = somar(num1, num2)
+        operacao = "+"
+    elif escolha == '2':
+        resultado = subtrair(num1, num2)
+        operacao = "-"
+    elif escolha == '3':
+        resultado = multiplicar(num1, num2)
+        operacao = "*"
+    elif escolha == '4':
+        resultado = dividir(num1, num2)
+        operacao = "/"
+
+    print(f"{num1} {operacao} {num2} = {resultado}")
+
+  # Executa a calculadora
+calculadora()
