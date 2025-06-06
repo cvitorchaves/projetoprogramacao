@@ -1,1 +1,1 @@
-# projetoprogramacao
+Projeto final referente a matéria de programação do professor Jeofton, Unipê.
